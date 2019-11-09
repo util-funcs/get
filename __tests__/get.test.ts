@@ -6,9 +6,11 @@ beforeEach(() => {
   bucket = {
     name: 'John',
     surname: 'Doe',
+    userName: 'doejohn',
     age: 34,
+    address1: 'Baker Street London',
     location: {
-      city: 'Londra',
+      city: 'London',
       country: 'UK',
     },
     orders: [
@@ -36,7 +38,9 @@ afterEach(() => {
 
 it('get nested object value.', () => {
   expect(get('name', bucket)).toEqual('John');
-  expect(get('location.city', bucket)).toEqual('Londra');
+  expect(get('userName', bucket)).toEqual('doejohn');
+  expect(get('address1', bucket)).toEqual('Baker Street London');
+  expect(get('location.city', bucket)).toEqual('London');
   expect(get('social-media', bucket)).toEqual('@doejohn');
   expect(get('phone_mobile', bucket)).toEqual('3323-232-32');
   expect(get('#hobbies[0]', bucket)).toEqual('travel');

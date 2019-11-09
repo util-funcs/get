@@ -1,6 +1,6 @@
 {
   "name": "@util-funcs/object-get",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Deep dive into plain object and take value by key chaining.",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
